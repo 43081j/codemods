@@ -1,0 +1,25 @@
+{
+  "name": "codemods",
+  "version": "1.0.0",
+  "description": "A collection of codemods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write codemods",
+    "lint": "npm run lint:format",
+    "lint:format": "prettier --check codemods"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/43081j/codemods.git"
+  },
+  "author": "James Garbutt (https://github.com/43081j)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/43081j/codemods/issues"
+  },
+  "homepage": "https://github.com/43081j/codemods#readme",
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}

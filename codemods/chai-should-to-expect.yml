@@ -4,14 +4,13 @@ rule:
   all:
     - pattern: $NAME.should.have.been.$PROP
     - any:
-      - pattern: $NAME.should.have.been.calledOnce
-      - pattern: $NAME.should.have.been.calledTwice
-      - pattern: $NAME.should.have.been.calledThrice
+        - pattern: $NAME.should.have.been.calledOnce
+        - pattern: $NAME.should.have.been.calledTwice
+        - pattern: $NAME.should.have.been.calledThrice
 fix: |-
   expect($NAME.$PROP).to.equal(true)
 
 ---
-
 id: should_to_expect_instanceof
 language: TypeScript
 rule:
@@ -20,7 +19,6 @@ fix: |-
   expect($NAME).instanceOf($TYPE)
 
 ---
-
 id: should_to_expect_sinon_calledWith
 language: TypeScript
 rule:
@@ -29,7 +27,6 @@ fix: |-
   expect($NAME).to.have.been.calledWith($$$ARGS)
 
 ---
-
 id: should_to_expect_sinon_notCalledWith
 language: TypeScript
 rule:
@@ -38,7 +35,6 @@ fix: |-
   expect($NAME).to.not.have.been.calledWith($$$ARGS)
 
 ---
-
 id: should_to_expect_sinon_called
 language: TypeScript
 rule:
@@ -47,7 +43,6 @@ fix: |-
   expect($NAME).to.have.been.called
 
 ---
-
 id: should_to_expect_sinon_not_called
 language: TypeScript
 rule:
@@ -56,7 +51,6 @@ fix: |-
   expect($NAME).not.to.have.been.called
 
 ---
-
 id: should_to_expect_sinon_genericShouldBe
 language: TypeScript
 rule:
@@ -65,7 +59,6 @@ fix: |-
   expect($NAME).to.be.$PROP
 
 ---
-
 id: should_to_expect_sinon_genericShould
 language: TypeScript
 rule:
