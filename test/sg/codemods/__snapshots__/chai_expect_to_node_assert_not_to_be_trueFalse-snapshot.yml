@@ -1,0 +1,30 @@
+id: chai_expect_to_node_assert_not_to_be_trueFalse
+snapshots:
+  expect(val).not.to.be.false:
+    fixed: assert.notEqual(val, false)
+    labels:
+    - source: expect(val).not.to.be.false
+      style: primary
+      start: 0
+      end: 27
+  expect(val).not.to.be.true:
+    fixed: assert.notEqual(val, true)
+    labels:
+    - source: expect(val).not.to.be.true
+      style: primary
+      start: 0
+      end: 26
+  expect(val).to.not.be.false:
+    fixed: assert.notEqual(val, false)
+    labels:
+    - source: expect(val).to.not.be.false
+      style: primary
+      start: 0
+      end: 27
+  expect(val).to.not.be.true:
+    fixed: assert.notEqual(val, true)
+    labels:
+    - source: expect(val).to.not.be.true
+      style: primary
+      start: 0
+      end: 26

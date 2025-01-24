@@ -1,0 +1,30 @@
+id: chai_expect_to_node_assert_sinon_not_to_have_been_called
+snapshots:
+  expect(fn()).not.to.have.been.called:
+    fixed: assert.equal(fn().called, false)
+    labels:
+    - source: expect(fn()).not.to.have.been.called
+      style: primary
+      start: 0
+      end: 36
+  expect(fn()).to.not.have.been.called:
+    fixed: assert.equal(fn().called, false)
+    labels:
+    - source: expect(fn()).to.not.have.been.called
+      style: primary
+      start: 0
+      end: 36
+  expect(spy).not.to.have.been.called:
+    fixed: assert.equal(spy.called, false)
+    labels:
+    - source: expect(spy).not.to.have.been.called
+      style: primary
+      start: 0
+      end: 35
+  expect(spy).to.not.have.been.called:
+    fixed: assert.equal(spy.called, false)
+    labels:
+    - source: expect(spy).to.not.have.been.called
+      style: primary
+      start: 0
+      end: 35

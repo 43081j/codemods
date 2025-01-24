@@ -1,0 +1,10 @@
+id: chai_expect_to_node_assert_not_to_be_lessThan
+valid:
+  - expect(val).to.be.lessThan(42)
+  - assert.ok(val >= 303)
+  - expect(val).not.to.be.lessThanOrEqual(303)
+invalid:
+  - expect(val).not.to.be.lessThan(303)
+  - expect(fn()).not.to.be.lessThan(303)
+  - expect(val).to.not.be.lessThan(303)
+  - expect(fn()).to.not.be.lessThan(303)

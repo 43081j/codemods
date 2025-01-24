@@ -1,0 +1,16 @@
+id: chai_expect_to_node_assert_to_be_greaterThan
+snapshots:
+  expect(fn()).to.be.greaterThan(303):
+    fixed: assert.ok(fn() > 303)
+    labels:
+    - source: expect(fn()).to.be.greaterThan(303)
+      style: primary
+      start: 0
+      end: 35
+  expect(val).to.be.greaterThan(303):
+    fixed: assert.ok(val > 303)
+    labels:
+    - source: expect(val).to.be.greaterThan(303)
+      style: primary
+      start: 0
+      end: 34

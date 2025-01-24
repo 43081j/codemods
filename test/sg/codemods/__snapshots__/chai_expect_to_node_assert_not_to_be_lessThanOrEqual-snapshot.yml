@@ -1,0 +1,30 @@
+id: chai_expect_to_node_assert_not_to_be_lessThanOrEqual
+snapshots:
+  expect(fn()).not.to.be.lessThanOrEqual(303):
+    fixed: assert.equal(fn() <= 303, false)
+    labels:
+    - source: expect(fn()).not.to.be.lessThanOrEqual(303)
+      style: primary
+      start: 0
+      end: 43
+  expect(fn()).to.not.be.lessThanOrEqual(303):
+    fixed: assert.equal(fn() <= 303, false)
+    labels:
+    - source: expect(fn()).to.not.be.lessThanOrEqual(303)
+      style: primary
+      start: 0
+      end: 43
+  expect(val).not.to.be.lessThanOrEqual(303):
+    fixed: assert.equal(val <= 303, false)
+    labels:
+    - source: expect(val).not.to.be.lessThanOrEqual(303)
+      style: primary
+      start: 0
+      end: 42
+  expect(val).to.not.be.lessThanOrEqual(303):
+    fixed: assert.equal(val <= 303, false)
+    labels:
+    - source: expect(val).to.not.be.lessThanOrEqual(303)
+      style: primary
+      start: 0
+      end: 42

@@ -1,0 +1,16 @@
+id: chai_expect_to_node_assert_instanceOf
+snapshots:
+  expect(val).instanceOf(AbortController):
+    fixed: assert.ok(val instanceof AbortController)
+    labels:
+    - source: expect(val).instanceOf(AbortController)
+      style: primary
+      start: 0
+      end: 39
+  expect(val).to.be.instanceOf(AbortController):
+    fixed: assert.ok(val instanceof AbortController)
+    labels:
+    - source: expect(val).to.be.instanceOf(AbortController)
+      style: primary
+      start: 0
+      end: 45

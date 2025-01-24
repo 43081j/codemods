@@ -1,0 +1,7 @@
+id: chai_expect_to_node_assert_to_be_ok
+valid:
+  - expect(val).not.to.be.ok
+  - assert.ok(val)
+invalid:
+  - expect(val).to.be.ok
+  - expect(fn()).to.be.ok

@@ -1,0 +1,9 @@
+id: chai_expect_to_node_assert_to_be_a_promise
+valid:
+  - assert.ok(val instanceof Promise)
+  - expect(val).to.be.a('function')
+  - expect(val).not.to.be.a('promise')
+  - expect(val instanceof Promise).to.be.true
+invalid:
+  - expect(val).to.be.a('promise')
+  - expect(val).to.be.a("promise")

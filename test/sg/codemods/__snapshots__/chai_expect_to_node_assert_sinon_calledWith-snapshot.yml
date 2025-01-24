@@ -1,0 +1,16 @@
+id: chai_expect_to_node_assert_sinon_calledWith
+snapshots:
+  expect(foo()).to.have.been.calledWith(3, 0, 3):
+    fixed: assert.ok(foo().calledWith(3, 0, 3))
+    labels:
+    - source: expect(foo()).to.have.been.calledWith(3, 0, 3)
+      style: primary
+      start: 0
+      end: 46
+  expect(val).to.have.been.calledWith(3, 0, 3):
+    fixed: assert.ok(val.calledWith(3, 0, 3))
+    labels:
+    - source: expect(val).to.have.been.calledWith(3, 0, 3)
+      style: primary
+      start: 0
+      end: 44

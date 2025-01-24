@@ -1,0 +1,23 @@
+id: chai_expect_to_node_assert_to_deep_equal
+snapshots:
+  expect(actual).to.be.deep.equal(exp):
+    fixed: assert.deepEqual(actual, exp)
+    labels:
+    - source: expect(actual).to.be.deep.equal(exp)
+      style: primary
+      start: 0
+      end: 36
+  expect(actual).to.deep.equal(exp):
+    fixed: assert.deepEqual(actual, exp)
+    labels:
+    - source: expect(actual).to.deep.equal(exp)
+      style: primary
+      start: 0
+      end: 33
+  expect(fn()).to.deep.equal(exp):
+    fixed: assert.deepEqual(fn(), exp)
+    labels:
+    - source: expect(fn()).to.deep.equal(exp)
+      style: primary
+      start: 0
+      end: 31

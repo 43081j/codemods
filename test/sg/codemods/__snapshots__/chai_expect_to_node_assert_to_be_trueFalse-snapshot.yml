@@ -1,0 +1,16 @@
+id: chai_expect_to_node_assert_to_be_trueFalse
+snapshots:
+  expect(val).to.be.false:
+    fixed: assert.equal(val, false)
+    labels:
+    - source: expect(val).to.be.false
+      style: primary
+      start: 0
+      end: 23
+  expect(val).to.be.true:
+    fixed: assert.equal(val, true)
+    labels:
+    - source: expect(val).to.be.true
+      style: primary
+      start: 0
+      end: 22

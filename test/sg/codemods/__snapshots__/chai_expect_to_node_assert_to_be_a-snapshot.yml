@@ -1,0 +1,37 @@
+id: chai_expect_to_node_assert_to_be_a
+snapshots:
+  expect(val).to.be.a('boolean'):
+    fixed: assert.ok(typeof val === 'boolean')
+    labels:
+    - source: expect(val).to.be.a('boolean')
+      style: primary
+      start: 0
+      end: 30
+  expect(val).to.be.a('function'):
+    fixed: assert.ok(typeof val === 'function')
+    labels:
+    - source: expect(val).to.be.a('function')
+      style: primary
+      start: 0
+      end: 31
+  expect(val).to.be.a('number'):
+    fixed: assert.ok(typeof val === 'number')
+    labels:
+    - source: expect(val).to.be.a('number')
+      style: primary
+      start: 0
+      end: 29
+  expect(val).to.be.a('object'):
+    fixed: assert.ok(typeof val === 'object')
+    labels:
+    - source: expect(val).to.be.a('object')
+      style: primary
+      start: 0
+      end: 29
+  expect(val).to.be.a('string'):
+    fixed: assert.ok(typeof val === 'string')
+    labels:
+    - source: expect(val).to.be.a('string')
+      style: primary
+      start: 0
+      end: 29

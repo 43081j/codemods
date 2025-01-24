@@ -1,0 +1,12 @@
+id: chai_expect_to_node_assert_not_to_equal
+valid:
+  - assert.equal(303, 808)
+  - expect(303).to.equal(808)
+  - expect(actual).not.to.deep.equal(exp)
+invalid:
+  - expect(303).not.to.equal(808)
+  - expect(303).not.to.be.equal(808)
+  - expect(fn()).not.to.equal(303)
+  - expect(303).to.not.equal(808)
+  - expect(303).to.not.be.equal(808)
+  - expect(fn()).to.not.equal(303)

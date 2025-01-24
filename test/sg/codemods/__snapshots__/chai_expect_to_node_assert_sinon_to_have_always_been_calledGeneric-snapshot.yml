@@ -1,0 +1,30 @@
+id: chai_expect_to_node_assert_sinon_to_have_always_been_calledGeneric
+snapshots:
+  expect(spy).to.have.always.been.calledWith(303):
+    fixed: assert.ok(spy.alwaysCalledWith(303))
+    labels:
+    - source: expect(spy).to.have.always.been.calledWith(303)
+      style: primary
+      start: 0
+      end: 47
+  expect(spy).to.have.always.been.calledWith(303, 808):
+    fixed: assert.ok(spy.alwaysCalledWith(303, 808))
+    labels:
+    - source: expect(spy).to.have.always.been.calledWith(303, 808)
+      style: primary
+      start: 0
+      end: 52
+  expect(spy).to.have.always.been.calledWithExactly(303, 808):
+    fixed: assert.ok(spy.alwaysCalledWithExactly(303, 808))
+    labels:
+    - source: expect(spy).to.have.always.been.calledWithExactly(303, 808)
+      style: primary
+      start: 0
+      end: 59
+  expect(spy).to.have.always.been.calledWithMatch(exp):
+    fixed: assert.ok(spy.alwaysCalledWithMatch(exp))
+    labels:
+    - source: expect(spy).to.have.always.been.calledWithMatch(exp)
+      style: primary
+      start: 0
+      end: 52

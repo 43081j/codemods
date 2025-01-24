@@ -1,0 +1,23 @@
+id: chai_expect_to_node_assert_not_instanceOf
+snapshots:
+  expect(val).not.instanceOf(AbortController):
+    fixed: assert.equal(val instanceof AbortController, false)
+    labels:
+    - source: expect(val).not.instanceOf(AbortController)
+      style: primary
+      start: 0
+      end: 43
+  expect(val).not.to.be.instanceOf(AbortController):
+    fixed: assert.equal(val instanceof AbortController, false)
+    labels:
+    - source: expect(val).not.to.be.instanceOf(AbortController)
+      style: primary
+      start: 0
+      end: 49
+  expect(val).to.not.be.instanceOf(AbortController):
+    fixed: assert.equal(val instanceof AbortController, false)
+    labels:
+    - source: expect(val).to.not.be.instanceOf(AbortController)
+      style: primary
+      start: 0
+      end: 49
