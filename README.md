@@ -17,3 +17,4 @@ sg scan -r path-to-codemod.yml path-to-source-code
 | Name | Description |
 | -- | -- |
 | [chai-should-to-expect](./codemods/chai-should-to-expect.yml) | Convert `should` assertions to `expect` assertions |
+| [chai-expect-to-node-assert](./codemods/chai-expect-to-node-assert.yml) | Convert chai `expect` assertions to `node:assert` assertions |
