@@ -1,0 +1,9 @@
+id: should_to_expect_instanceof
+valid:
+  - expect(foo).to.be.instanceOf(Bar)
+  - expect(foo).to.be.an.instanceOf(Bar)
+  - foo.should.not.be.an.instanceof(Bar)
+invalid:
+  - foo.should.be.an.instanceof(Bar)
+  - foo.bar.should.be.an.instanceof(Baz)
+  - foo.should.be.an.instanceOf(Bar)

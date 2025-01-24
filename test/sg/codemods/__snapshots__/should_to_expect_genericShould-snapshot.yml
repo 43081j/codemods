@@ -1,0 +1,44 @@
+id: should_to_expect_genericShould
+snapshots:
+  foo().should.equal(808):
+    fixed: expect(foo()).to.equal(808)
+    labels:
+    - source: foo().should.equal
+      style: primary
+      start: 0
+      end: 18
+  foo.bar.should.be.true:
+    fixed: expect(foo.bar).to.be.true
+    labels:
+    - source: foo.bar.should.be
+      style: primary
+      start: 0
+      end: 17
+  foo.bar.should.equal(808):
+    fixed: expect(foo.bar).to.equal(808)
+    labels:
+    - source: foo.bar.should.equal
+      style: primary
+      start: 0
+      end: 20
+  foo.should.be.true:
+    fixed: expect(foo).to.be.true
+    labels:
+    - source: foo.should.be
+      style: primary
+      start: 0
+      end: 13
+  foo.should.equal(303):
+    fixed: expect(foo).to.equal(303)
+    labels:
+    - source: foo.should.equal
+      style: primary
+      start: 0
+      end: 16
+  foo.should.not.equal(303):
+    fixed: expect(foo).to.not.equal(303)
+    labels:
+    - source: foo.should.not
+      style: primary
+      start: 0
+      end: 14

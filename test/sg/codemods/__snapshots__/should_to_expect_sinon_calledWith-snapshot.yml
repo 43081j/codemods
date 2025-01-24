@@ -1,0 +1,16 @@
+id: should_to_expect_sinon_calledWith
+snapshots:
+  foo.bar.should.have.been.calledWith(bar):
+    fixed: expect(foo.bar).to.have.been.calledWith(bar)
+    labels:
+    - source: foo.bar.should.have.been.calledWith(bar)
+      style: primary
+      start: 0
+      end: 40
+  foo.should.have.been.calledWith(bar):
+    fixed: expect(foo).to.have.been.calledWith(bar)
+    labels:
+    - source: foo.should.have.been.calledWith(bar)
+      style: primary
+      start: 0
+      end: 36

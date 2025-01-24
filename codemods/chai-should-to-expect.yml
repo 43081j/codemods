@@ -14,7 +14,9 @@ fix: |-
 id: should_to_expect_instanceof
 language: TypeScript
 rule:
-  pattern: $NAME.should.be.an.instanceof($TYPE)
+  any:
+    - pattern: $NAME.should.be.an.instanceof($TYPE)
+    - pattern: $NAME.should.be.an.instanceOf($TYPE)
 fix: |-
   expect($NAME).instanceOf($TYPE)
 

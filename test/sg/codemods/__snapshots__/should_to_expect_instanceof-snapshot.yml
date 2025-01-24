@@ -1,0 +1,23 @@
+id: should_to_expect_instanceof
+snapshots:
+  foo.bar.should.be.an.instanceof(Baz):
+    fixed: expect(foo.bar).instanceOf(Baz)
+    labels:
+    - source: foo.bar.should.be.an.instanceof(Baz)
+      style: primary
+      start: 0
+      end: 36
+  foo.should.be.an.instanceOf(Bar):
+    fixed: expect(foo).instanceOf(Bar)
+    labels:
+    - source: foo.should.be.an.instanceOf(Bar)
+      style: primary
+      start: 0
+      end: 32
+  foo.should.be.an.instanceof(Bar):
+    fixed: expect(foo).instanceOf(Bar)
+    labels:
+    - source: foo.should.be.an.instanceof(Bar)
+      style: primary
+      start: 0
+      end: 32
