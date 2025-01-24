@@ -1,0 +1,10 @@
+id: should_to_expect_genericShould
+valid:
+  - expect(foo).to.equal(303)
+invalid:
+  - foo.should.equal(303)
+  - foo.should.not.equal(303)
+  - foo.should.be.true
+  - foo.bar.should.be.true
+  - foo.bar.should.equal(808)
+  - foo().should.equal(808)

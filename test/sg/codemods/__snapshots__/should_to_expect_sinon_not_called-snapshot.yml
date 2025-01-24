@@ -1,0 +1,16 @@
+id: should_to_expect_sinon_not_called
+snapshots:
+  foo.bar.should.not.have.been.called:
+    fixed: expect(foo.bar).not.to.have.been.called
+    labels:
+    - source: foo.bar.should.not.have.been.called
+      style: primary
+      start: 0
+      end: 35
+  foo.should.not.have.been.called:
+    fixed: expect(foo).not.to.have.been.called
+    labels:
+    - source: foo.should.not.have.been.called
+      style: primary
+      start: 0
+      end: 31

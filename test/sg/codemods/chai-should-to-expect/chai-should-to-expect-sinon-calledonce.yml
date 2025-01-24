@@ -1,0 +1,9 @@
+id: should_to_expect_sinon_calledOnce
+valid:
+  - bar.should.have.been.calledAMillionTimes
+  - expect(foo).to.have.been.calledOnce
+invalid:
+  - foo.should.have.been.calledOnce
+  - foo.should.have.been.calledTwice
+  - foo.should.have.been.calledThrice
+  - foo.bar.should.have.been.calledOnce

@@ -4,10 +4,10 @@
   "description": "A collection of codemods",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write codemods",
+    "test": "ast-grep test",
+    "format": "prettier --write codemods test",
     "lint": "npm run lint:format",
-    "lint:format": "prettier --check codemods"
+    "lint:format": "prettier --check codemods test"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/43081j/codemods#readme",
   "devDependencies": {
+    "@ast-grep/cli": "^0.33.1",
     "prettier": "^3.4.2"
   }
 }

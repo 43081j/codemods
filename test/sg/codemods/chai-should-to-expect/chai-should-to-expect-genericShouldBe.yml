@@ -1,0 +1,8 @@
+id: should_to_expect_genericShouldBe
+valid:
+  - foo.should.not.be.a('function')
+  - expect(foo).to.be.a('function')
+invalid:
+  - foo.should.be.a('function')
+  - foo.bar.should.be.a('function')
+  - foo.should.be.equal(303)

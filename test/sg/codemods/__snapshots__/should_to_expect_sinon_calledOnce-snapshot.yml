@@ -1,0 +1,30 @@
+id: should_to_expect_sinon_calledOnce
+snapshots:
+  foo.bar.should.have.been.calledOnce:
+    fixed: expect(foo.bar.calledOnce).to.equal(true)
+    labels:
+    - source: foo.bar.should.have.been.calledOnce
+      style: primary
+      start: 0
+      end: 35
+  foo.should.have.been.calledOnce:
+    fixed: expect(foo.calledOnce).to.equal(true)
+    labels:
+    - source: foo.should.have.been.calledOnce
+      style: primary
+      start: 0
+      end: 31
+  foo.should.have.been.calledThrice:
+    fixed: expect(foo.calledThrice).to.equal(true)
+    labels:
+    - source: foo.should.have.been.calledThrice
+      style: primary
+      start: 0
+      end: 33
+  foo.should.have.been.calledTwice:
+    fixed: expect(foo.calledTwice).to.equal(true)
+    labels:
+    - source: foo.should.have.been.calledTwice
+      style: primary
+      start: 0
+      end: 32

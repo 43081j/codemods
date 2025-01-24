@@ -1,0 +1,23 @@
+id: should_to_expect_genericShouldBe
+snapshots:
+  foo.bar.should.be.a('function'):
+    fixed: expect(foo.bar).to.be.a('function')
+    labels:
+    - source: foo.bar.should.be.a
+      style: primary
+      start: 0
+      end: 19
+  foo.should.be.a('function'):
+    fixed: expect(foo).to.be.a('function')
+    labels:
+    - source: foo.should.be.a
+      style: primary
+      start: 0
+      end: 15
+  foo.should.be.equal(303):
+    fixed: expect(foo).to.be.equal(303)
+    labels:
+    - source: foo.should.be.equal
+      style: primary
+      start: 0
+      end: 19

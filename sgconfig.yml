@@ -1,0 +1,4 @@
+ruleDirs:
+  - codemods
+testConfigs:
+  - testDir: test/sg/codemods

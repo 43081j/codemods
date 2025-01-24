@@ -1,0 +1,8 @@
+id: should_to_expect_sinon_called
+valid:
+  - foo.should.not.have.been.called
+  - expect(foo).to.have.been.called
+  - expect(foo).to.have.been.called
+invalid:
+  - foo.should.have.been.called
+  - foo.bar.should.have.been.called
