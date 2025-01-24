@@ -51,7 +51,7 @@ fix: |-
   expect($NAME).not.to.have.been.called
 
 ---
-id: should_to_expect_sinon_genericShouldBe
+id: should_to_expect_genericShouldBe
 language: TypeScript
 rule:
   pattern: $NAME.should.be.$PROP
@@ -59,7 +59,7 @@ fix: |-
   expect($NAME).to.be.$PROP
 
 ---
-id: should_to_expect_sinon_genericShould
+id: should_to_expect_genericShould
 language: TypeScript
 rule:
   pattern: $NAME.should.$PROP
