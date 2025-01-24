@@ -1,0 +1,11 @@
+id: chai_expect_to_node_assert_not_to_deep_equal
+valid:
+  - assert.equal(303, 808)
+  - expect(actual).not.to.equal(exp)
+invalid:
+  - expect(actual).not.to.deep.equal(exp)
+  - expect(actual).not.to.be.deep.equal(exp)
+  - expect(fn()).not.to.deep.equal(exp)
+  - expect(actual).to.not.deep.equal(exp)
+  - expect(actual).to.not.be.deep.equal(exp)
+  - expect(fn()).to.not.deep.equal(exp)

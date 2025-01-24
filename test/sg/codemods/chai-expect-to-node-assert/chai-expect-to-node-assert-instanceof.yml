@@ -1,0 +1,8 @@
+id: chai_expect_to_node_assert_instanceOf
+valid:
+  - assert.instanceOf(val, AbortController)
+  - expect(val).not.instanceOf(AbortController)
+  - expect(val).not.to.be.instanceOf(AbortController)
+invalid:
+  - expect(val).to.be.instanceOf(AbortController)
+  - expect(val).instanceOf(AbortController)

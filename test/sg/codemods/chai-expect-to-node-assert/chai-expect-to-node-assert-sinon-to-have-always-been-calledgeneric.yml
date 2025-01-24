@@ -1,0 +1,11 @@
+id: chai_expect_to_node_assert_sinon_to_have_always_been_calledGeneric
+valid:
+  - assert.ok(spy.alwaysCalledWith(303))
+  - expect(spy.alwaysCalledWith(303)).to.be.true
+  - expect(spy).to.have.always.been.called
+  - expect(spy).to.have.always.been.oogaboogad(303)
+invalid:
+  - expect(spy).to.have.always.been.calledWith(303)
+  - expect(spy).to.have.always.been.calledWith(303, 808)
+  - expect(spy).to.have.always.been.calledWithExactly(303, 808)
+  - expect(spy).to.have.always.been.calledWithMatch(exp)

@@ -1,0 +1,9 @@
+id: chai_expect_to_node_assert_sinon_to_have_been_called
+valid:
+  - expect(spy).not.to.have.been.called
+  - assert.ok(spy.called)
+  - assert.equal(spy.called, true)
+  - expect(spy.called).to.be.ok
+invalid:
+  - expect(spy).to.have.been.called
+  - expect(fn()).to.have.been.called

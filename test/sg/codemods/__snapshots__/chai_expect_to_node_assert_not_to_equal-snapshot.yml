@@ -1,0 +1,44 @@
+id: chai_expect_to_node_assert_not_to_equal
+snapshots:
+  expect(303).not.to.be.equal(808):
+    fixed: assert.notEqual(303, 808)
+    labels:
+    - source: expect(303).not.to.be.equal(808)
+      style: primary
+      start: 0
+      end: 32
+  expect(303).not.to.equal(808):
+    fixed: assert.notEqual(303, 808)
+    labels:
+    - source: expect(303).not.to.equal(808)
+      style: primary
+      start: 0
+      end: 29
+  expect(303).to.not.be.equal(808):
+    fixed: assert.notEqual(303, 808)
+    labels:
+    - source: expect(303).to.not.be.equal(808)
+      style: primary
+      start: 0
+      end: 32
+  expect(303).to.not.equal(808):
+    fixed: assert.notEqual(303, 808)
+    labels:
+    - source: expect(303).to.not.equal(808)
+      style: primary
+      start: 0
+      end: 29
+  expect(fn()).not.to.equal(303):
+    fixed: assert.notEqual(fn(), 303)
+    labels:
+    - source: expect(fn()).not.to.equal(303)
+      style: primary
+      start: 0
+      end: 30
+  expect(fn()).to.not.equal(303):
+    fixed: assert.notEqual(fn(), 303)
+    labels:
+    - source: expect(fn()).to.not.equal(303)
+      style: primary
+      start: 0
+      end: 30

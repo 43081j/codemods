@@ -1,0 +1,8 @@
+id: chai_expect_to_node_assert_sinon_calledWith
+valid:
+  - expect(val).to.have.been.called
+  - assert.ok(val.calledWith(3, 0, 3))
+  - expect(val).not.to.have.been.calledWith(3, 0, 3)
+invalid:
+  - expect(val).to.have.been.calledWith(3, 0, 3)
+  - expect(foo()).to.have.been.calledWith(3, 0, 3)

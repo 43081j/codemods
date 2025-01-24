@@ -1,0 +1,11 @@
+id: chai_expect_to_node_assert_to_be_a
+valid:
+  - expect(val).not.to.be.a('function')
+  - expect(val).to.not.be.a('function')
+  - expect(val).to.be.a('promise')
+invalid:
+  - expect(val).to.be.a('function')
+  - expect(val).to.be.a('string')
+  - expect(val).to.be.a('number')
+  - expect(val).to.be.a('object')
+  - expect(val).to.be.a('boolean')

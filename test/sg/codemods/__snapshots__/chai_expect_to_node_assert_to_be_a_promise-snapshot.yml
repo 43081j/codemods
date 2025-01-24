@@ -1,0 +1,16 @@
+id: chai_expect_to_node_assert_to_be_a_promise
+snapshots:
+  expect(val).to.be.a("promise"):
+    fixed: assert.ok(val instanceof Promise)
+    labels:
+    - source: expect(val).to.be.a("promise")
+      style: primary
+      start: 0
+      end: 30
+  expect(val).to.be.a('promise'):
+    fixed: assert.ok(val instanceof Promise)
+    labels:
+    - source: expect(val).to.be.a('promise')
+      style: primary
+      start: 0
+      end: 30

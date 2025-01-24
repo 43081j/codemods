@@ -1,0 +1,16 @@
+id: chai_expect_to_node_assert_sinon_to_have_been_called
+snapshots:
+  expect(fn()).to.have.been.called:
+    fixed: assert.ok(fn().called)
+    labels:
+    - source: expect(fn()).to.have.been.called
+      style: primary
+      start: 0
+      end: 32
+  expect(spy).to.have.been.called:
+    fixed: assert.ok(spy.called)
+    labels:
+    - source: expect(spy).to.have.been.called
+      style: primary
+      start: 0
+      end: 31

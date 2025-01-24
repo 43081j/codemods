@@ -1,0 +1,16 @@
+id: chai_expect_to_node_assert_to_be_ok
+snapshots:
+  expect(fn()).to.be.ok:
+    fixed: assert.ok(fn())
+    labels:
+    - source: expect(fn()).to.be.ok
+      style: primary
+      start: 0
+      end: 21
+  expect(val).to.be.ok:
+    fixed: assert.ok(val)
+    labels:
+    - source: expect(val).to.be.ok
+      style: primary
+      start: 0
+      end: 20

@@ -1,0 +1,44 @@
+id: chai_expect_to_node_assert_not_to_deep_equal
+snapshots:
+  expect(actual).not.to.be.deep.equal(exp):
+    fixed: assert.notDeepEqual(actual, exp)
+    labels:
+    - source: expect(actual).not.to.be.deep.equal(exp)
+      style: primary
+      start: 0
+      end: 40
+  expect(actual).not.to.deep.equal(exp):
+    fixed: assert.notDeepEqual(actual, exp)
+    labels:
+    - source: expect(actual).not.to.deep.equal(exp)
+      style: primary
+      start: 0
+      end: 37
+  expect(actual).to.not.be.deep.equal(exp):
+    fixed: assert.notDeepEqual(actual, exp)
+    labels:
+    - source: expect(actual).to.not.be.deep.equal(exp)
+      style: primary
+      start: 0
+      end: 40
+  expect(actual).to.not.deep.equal(exp):
+    fixed: assert.notDeepEqual(actual, exp)
+    labels:
+    - source: expect(actual).to.not.deep.equal(exp)
+      style: primary
+      start: 0
+      end: 37
+  expect(fn()).not.to.deep.equal(exp):
+    fixed: assert.notDeepEqual(fn(), exp)
+    labels:
+    - source: expect(fn()).not.to.deep.equal(exp)
+      style: primary
+      start: 0
+      end: 35
+  expect(fn()).to.not.deep.equal(exp):
+    fixed: assert.notDeepEqual(fn(), exp)
+    labels:
+    - source: expect(fn()).to.not.deep.equal(exp)
+      style: primary
+      start: 0
+      end: 35

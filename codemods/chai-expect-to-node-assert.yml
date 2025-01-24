@@ -1,0 +1,283 @@
+id: chai_expect_to_node_assert_instanceOf
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).instanceOf($CONSTRUCTOR)
+    - pattern: expect($ACTUAL).instanceof($CONSTRUCTOR)
+    - pattern: expect($ACTUAL).to.be.instanceOf($CONSTRUCTOR)
+fix: |-
+  assert.ok($ACTUAL instanceof $CONSTRUCTOR)
+
+---
+id: chai_expect_to_node_assert_not_instanceOf
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).not.instanceOf($CONSTRUCTOR)
+    - pattern: expect($ACTUAL).to.not.be.instanceOf($CONSTRUCTOR)
+    - pattern: expect($ACTUAL).not.to.be.instanceOf($CONSTRUCTOR)
+fix: |-
+  assert.equal($ACTUAL instanceof $CONSTRUCTOR, false)
+
+---
+id: chai_expect_to_node_assert_to_be_a
+language: TypeScript
+rule:
+  pattern: expect($ACTUAL).to.be.a($TYPE)
+constraints:
+  TYPE:
+    regex: 'function|string|number|object|boolean'
+fix: |-
+  assert.ok(typeof $ACTUAL === $TYPE)
+
+---
+id: chai_expect_to_node_assert_sinon_calledWith
+language: TypeScript
+rule:
+  pattern: expect($ACTUAL).to.have.been.calledWith($$$ARGS)
+fix: |-
+  assert.ok($ACTUAL.calledWith($$$ARGS))
+
+---
+id: chai_expect_to_node_assert_sinon_not_calledWith
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).to.not.have.been.calledWith($$$ARGS)
+    - pattern: expect($ACTUAL).not.to.have.been.calledWith($$$ARGS)
+fix: |-
+  assert.equal($ACTUAL.calledWith($$$ARGS), false)
+
+---
+id: chai_expect_to_node_assert_to_be_ok
+language: TypeScript
+rule:
+  pattern: expect($ACTUAL).to.be.ok
+fix: |-
+  assert.ok($ACTUAL)
+
+---
+id: chai_expect_to_node_assert_not_to_be_ok
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).not.to.be.ok
+    - pattern: expect($ACTUAL).to.not.be.ok
+fix: |-
+  assert.equal(!$ACTUAL, true)
+
+---
+id: chai_expect_to_node_assert_sinon_to_have_been_called
+language: TypeScript
+rule:
+  pattern: expect($ACTUAL).to.have.been.called
+fix: |-
+  assert.ok($ACTUAL.called)
+
+---
+id: chai_expect_to_node_assert_sinon_not_to_have_been_called
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).not.to.have.been.called
+    - pattern: expect($ACTUAL).to.not.have.been.called
+fix: |-
+  assert.equal($ACTUAL.called, false)
+
+---
+id: chai_expect_to_node_assert_to_be_greaterThanOrEqual
+language: TypeScript
+rule:
+  pattern: expect($ACTUAL).to.be.greaterThanOrEqual($VAL)
+fix: |-
+  assert.ok($ACTUAL >= $VAL)
+
+---
+id: chai_expect_to_node_assert_to_be_greaterThan
+language: TypeScript
+rule:
+  pattern: expect($ACTUAL).to.be.greaterThan($VAL)
+fix: |-
+  assert.ok($ACTUAL > $VAL)
+
+---
+id: chai_expect_to_node_assert_to_be_lessThan
+language: TypeScript
+rule:
+  pattern: expect($ACTUAL).to.be.lessThan($VAL)
+fix: |-
+  assert.ok($ACTUAL < $VAL)
+
+---
+id: chai_expect_to_node_assert_to_be_lessThanOrEqual
+language: TypeScript
+rule:
+  pattern: expect($ACTUAL).to.be.lessThanOrEqual($VAL)
+fix: |-
+  assert.ok($ACTUAL <= $VAL)
+
+---
+id: chai_expect_to_node_assert_not_to_be_greaterThanOrEqual
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).not.to.be.greaterThanOrEqual($VAL)
+    - pattern: expect($ACTUAL).to.not.be.greaterThanOrEqual($VAL)
+fix: |-
+  assert.equal($ACTUAL >= $VAL, false)
+
+---
+id: chai_expect_to_node_assert_not_to_be_greaterThan
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).not.to.be.greaterThan($VAL)
+    - pattern: expect($ACTUAL).to.not.be.greaterThan($VAL)
+fix: |-
+  assert.equal($ACTUAL > $VAL, false)
+
+---
+id: chai_expect_to_node_assert_not_to_be_lessThan
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).not.to.be.lessThan($VAL)
+    - pattern: expect($ACTUAL).to.not.be.lessThan($VAL)
+fix: |-
+  assert.equal($ACTUAL < $VAL, false)
+
+---
+id: chai_expect_to_node_assert_not_to_be_lessThanOrEqual
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).not.to.be.lessThanOrEqual($VAL)
+    - pattern: expect($ACTUAL).to.not.be.lessThanOrEqual($VAL)
+fix: |-
+  assert.equal($ACTUAL <= $VAL, false)
+
+---
+id: chai_expect_to_node_assert_sinon_to_have_always_been_calledGeneric
+language: TypeScript
+rule:
+  pattern: expect($ACTUAL).to.have.always.been.$METHOD($$$ARGS)
+constraints:
+  METHOD:
+    regex: '^called'
+transform:
+  METHOD_PART:
+    convert:
+      toCase: capitalize
+      source: $METHOD
+fix: |-
+  assert.ok($ACTUAL.always$METHOD_PART($$$ARGS))
+
+---
+id: chai_expect_to_node_assert_sinon_not_to_have_always_been_calledGeneric
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).not.to.have.always.been.$METHOD($$$ARGS)
+    - pattern: expect($ACTUAL).to.not.have.always.been.$METHOD($$$ARGS)
+constraints:
+  METHOD:
+    regex: '^called'
+transform:
+  METHOD_PART:
+    convert:
+      toCase: capitalize
+      source: $METHOD
+fix: |-
+  assert.equal($ACTUAL.always$METHOD_PART($$$ARGS), false)
+
+---
+id: chai_expect_to_node_assert_to_equal
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).to.equal($EXPECTED)
+    - pattern: expect($ACTUAL).to.be.equal($EXPECTED)
+fix: |-
+  assert.equal($ACTUAL, $EXPECTED)
+
+---
+id: chai_expect_to_node_assert_to_deep_equal
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).to.deep.equal($EXPECTED)
+    - pattern: expect($ACTUAL).to.be.deep.equal($EXPECTED)
+fix: |-
+  assert.deepEqual($ACTUAL, $EXPECTED)
+
+---
+id: chai_expect_to_node_assert_not_to_equal
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).not.to.equal($EXPECTED)
+    - pattern: expect($ACTUAL).to.not.equal($EXPECTED)
+    - pattern: expect($ACTUAL).not.to.be.equal($EXPECTED)
+    - pattern: expect($ACTUAL).to.not.be.equal($EXPECTED)
+fix: |-
+  assert.notEqual($ACTUAL, $EXPECTED)
+
+---
+id: chai_expect_to_node_assert_not_to_deep_equal
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).to.not.deep.equal($EXPECTED)
+    - pattern: expect($ACTUAL).not.to.deep.equal($EXPECTED)
+    - pattern: expect($ACTUAL).to.not.be.deep.equal($EXPECTED)
+    - pattern: expect($ACTUAL).not.to.be.deep.equal($EXPECTED)
+fix: |-
+  assert.notDeepEqual($ACTUAL, $EXPECTED)
+
+---
+id: chai_expect_to_node_assert_to_be_trueFalse
+language: TypeScript
+rule:
+  pattern: expect($ACTUAL).to.be.$TRUEFALSE
+constraints:
+  TRUEFALSE:
+    regex: '^true|false$'
+fix: |-
+  assert.equal($ACTUAL, $TRUEFALSE)
+
+---
+id: chai_expect_to_node_assert_not_to_be_trueFalse
+language: TypeScript
+rule:
+  any:
+    - pattern: expect($ACTUAL).not.to.be.$TRUEFALSE
+    - pattern: expect($ACTUAL).to.not.be.$TRUEFALSE
+constraints:
+  TRUEFALSE:
+    regex: '^true|false$'
+fix: |-
+  assert.notEqual($ACTUAL, $TRUEFALSE)
+
+---
+id: chai_expect_to_node_assert_to_be_a_promise
+language: TypeScript
+rule:
+  pattern:
+    context: expect($ACTUAL).to.be.a('promise')
+    strictness: relaxed
+fix: |-
+  assert.ok($ACTUAL instanceof Promise)
+
+---
+id: chai_expect_to_node_assert_not_to_be_a_promise
+language: TypeScript
+rule:
+  any:
+    - pattern:
+        context: expect($ACTUAL).to.not.be.a('promise')
+        strictness: relaxed
+    - pattern:
+        context: expect($ACTUAL).not.to.be.a('promise')
+        strictness: relaxed
+fix: |-
+  assert.equal($ACTUAL instanceof Promise, false)

@@ -1,0 +1,30 @@
+id: chai_expect_to_node_assert_not_to_be_ok
+snapshots:
+  expect(fn()).not.to.be.ok:
+    fixed: assert.equal(!fn(), true)
+    labels:
+    - source: expect(fn()).not.to.be.ok
+      style: primary
+      start: 0
+      end: 25
+  expect(fn()).to.not.be.ok:
+    fixed: assert.equal(!fn(), true)
+    labels:
+    - source: expect(fn()).to.not.be.ok
+      style: primary
+      start: 0
+      end: 25
+  expect(val).not.to.be.ok:
+    fixed: assert.equal(!val, true)
+    labels:
+    - source: expect(val).not.to.be.ok
+      style: primary
+      start: 0
+      end: 24
+  expect(val).to.not.be.ok:
+    fixed: assert.equal(!val, true)
+    labels:
+    - source: expect(val).to.not.be.ok
+      style: primary
+      start: 0
+      end: 24

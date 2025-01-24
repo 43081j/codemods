@@ -1,0 +1,23 @@
+id: chai_expect_to_node_assert_to_equal
+snapshots:
+  expect(303).to.be.equal(808):
+    fixed: assert.equal(303, 808)
+    labels:
+    - source: expect(303).to.be.equal(808)
+      style: primary
+      start: 0
+      end: 28
+  expect(303).to.equal(808):
+    fixed: assert.equal(303, 808)
+    labels:
+    - source: expect(303).to.equal(808)
+      style: primary
+      start: 0
+      end: 25
+  expect(fn()).to.equal(303):
+    fixed: assert.equal(fn(), 303)
+    labels:
+    - source: expect(fn()).to.equal(303)
+      style: primary
+      start: 0
+      end: 26

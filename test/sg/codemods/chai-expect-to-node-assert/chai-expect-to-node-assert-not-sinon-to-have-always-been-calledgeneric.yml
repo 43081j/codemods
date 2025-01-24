@@ -1,0 +1,15 @@
+id: chai_expect_to_node_assert_sinon_not_to_have_always_been_calledGeneric
+valid:
+  - assert.equal(spy.alwaysCalledWith(303), false)
+  - expect(spy.alwaysCalledWith(303)).to.be.false
+  - expect(spy).not.to.have.always.been.called
+  - expect(spy).not.to.have.always.been.oogaboogad(303)
+invalid:
+  - expect(spy).not.to.have.always.been.calledWith(303)
+  - expect(spy).not.to.have.always.been.calledWith(303, 808)
+  - expect(spy).not.to.have.always.been.calledWithExactly(303, 808)
+  - expect(spy).not.to.have.always.been.calledWithMatch(exp)
+  - expect(spy).to.not.have.always.been.calledWith(303)
+  - expect(spy).to.not.have.always.been.calledWith(303, 808)
+  - expect(spy).to.not.have.always.been.calledWithExactly(303, 808)
+  - expect(spy).to.not.have.always.been.calledWithMatch(exp)
