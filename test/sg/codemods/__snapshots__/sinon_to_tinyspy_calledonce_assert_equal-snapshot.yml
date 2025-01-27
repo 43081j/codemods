@@ -1,0 +1,16 @@
+id: sinon_to_tinyspy_calledonce_assert_equal
+snapshots:
+  assert.equal(foo.calledOnce, true):
+    fixed: assert.equal(foo.callCount, 1)
+    labels:
+    - source: assert.equal(foo.calledOnce, true)
+      style: primary
+      start: 0
+      end: 34
+  assert.equal(spy.calledOnce, true):
+    fixed: assert.equal(spy.callCount, 1)
+    labels:
+    - source: assert.equal(spy.calledOnce, true)
+      style: primary
+      start: 0
+      end: 34

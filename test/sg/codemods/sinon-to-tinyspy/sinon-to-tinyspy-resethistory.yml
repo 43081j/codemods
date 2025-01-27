@@ -1,0 +1,7 @@
+id: sinon_to_tinyspy_resethistory
+valid:
+  - spy.reset()
+  - foo.bar.reset()
+invalid:
+  - spy.resetHistory()
+  - foo.bar.resetHistory()

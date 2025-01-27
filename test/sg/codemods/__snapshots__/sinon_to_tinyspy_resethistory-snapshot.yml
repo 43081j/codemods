@@ -1,0 +1,16 @@
+id: sinon_to_tinyspy_resethistory
+snapshots:
+  foo.bar.resetHistory():
+    fixed: foo.bar.reset()
+    labels:
+    - source: foo.bar.resetHistory()
+      style: primary
+      start: 0
+      end: 22
+  spy.resetHistory():
+    fixed: spy.reset()
+    labels:
+    - source: spy.resetHistory()
+      style: primary
+      start: 0
+      end: 18

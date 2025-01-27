@@ -1,0 +1,6 @@
+id: sinon_to_tinyspy_args
+valid:
+  - spy.calls[0][0]
+  - foo.bar.args[0][0]
+invalid:
+  - spy.args[0][0]

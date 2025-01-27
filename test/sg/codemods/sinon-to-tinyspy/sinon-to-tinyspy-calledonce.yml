@@ -1,0 +1,5 @@
+id: sinon_to_tinyspy_calledonce
+valid:
+  - unknownFn(spy.callCount === 1)
+invalid:
+  - unknownFn(spy.calledOnce)
