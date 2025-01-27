@@ -1,0 +1,16 @@
+id: sinon_to_tinyspy_calledonce_assert_ok
+snapshots:
+  assert.ok(foo.calledOnce):
+    fixed: assert.equal(foo.callCount, 1)
+    labels:
+    - source: assert.ok(foo.calledOnce)
+      style: primary
+      start: 0
+      end: 25
+  assert.ok(spy.calledOnce):
+    fixed: assert.equal(spy.callCount, 1)
+    labels:
+    - source: assert.ok(spy.calledOnce)
+      style: primary
+      start: 0
+      end: 25

@@ -1,0 +1,9 @@
+id: sinon_to_tinyspy_args
+snapshots:
+  spy.args[0][0]:
+    fixed: spy.calls[0][0]
+    labels:
+    - source: spy.args[0][0]
+      style: primary
+      start: 0
+      end: 14

@@ -1,0 +1,65 @@
+id: sinon_to_tinyspy_calledonce_assert_equal
+language: TypeScript
+rule:
+  pattern: assert.equal($SPY.calledOnce, true)
+fix: |-
+  assert.equal($SPY.callCount, 1)
+
+---
+id: sinon_to_tinyspy_calledtwice_assert_equal
+language: TypeScript
+rule:
+  pattern: assert.equal($SPY.calledTwice, true)
+fix: |-
+  assert.equal($SPY.callCount, 2)
+
+---
+id: sinon_to_tinyspy_calledonce_assert_ok
+language: TypeScript
+rule:
+  pattern: assert.ok($SPY.calledOnce)
+fix: |-
+  assert.equal($SPY.callCount, 1)
+
+---
+id: sinon_to_tinyspy_calledtwice_assert_ok
+language: TypeScript
+rule:
+  pattern: assert.ok($SPY.calledTwice)
+fix: |-
+  assert.equal($SPY.callCount, 2)
+
+---
+id: sinon_to_tinyspy_calledonce
+language: TypeScript
+rule:
+  pattern: $SPY.calledOnce
+fix: |-
+  $SPY.callCount === 1
+
+---
+id: sinon_to_tinyspy_calledtwice
+language: TypeScript
+rule:
+  pattern: $SPY.calledTwice
+fix: |-
+  $SPY.callCount === 2
+
+---
+id: sinon_to_tinyspy_resethistory
+language: TypeScript
+rule:
+  pattern: $SPY.resetHistory()
+fix: |-
+  $SPY.reset()
+
+---
+id: sinon_to_tinyspy_args
+language: TypeScript
+rule:
+  pattern: $SPY.args[$INDEX][$ARGINDEX]
+constraints:
+  SPY:
+    regex: '[sS]py'
+fix: |-
+  $SPY.calls[$INDEX][$ARGINDEX]

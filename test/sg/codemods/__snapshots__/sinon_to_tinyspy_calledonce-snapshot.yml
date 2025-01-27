@@ -1,0 +1,9 @@
+id: sinon_to_tinyspy_calledonce
+snapshots:
+  unknownFn(spy.calledOnce):
+    fixed: unknownFn(spy.callCount === 1)
+    labels:
+    - source: spy.calledOnce
+      style: primary
+      start: 10
+      end: 24

@@ -1,0 +1,8 @@
+id: sinon_to_tinyspy_calledtwice_assert_equal
+valid:
+  - assert.equal(spy.callCount, 1)
+  - assert.equal(spy.calledOnce, true)
+  - assert.ok(spy.calledTwice)
+invalid:
+  - assert.equal(spy.calledTwice, true)
+  - assert.equal(foo.calledTwice, true)
