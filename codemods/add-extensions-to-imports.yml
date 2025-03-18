@@ -5,6 +5,8 @@ rule:
     - pattern: $NODE
     - not:
         regex: "(\/|\\.[a-z]+)$"
+    - not:
+        regex: "^[^\\.]"
     - kind: string_fragment
       inside:
         kind: string
