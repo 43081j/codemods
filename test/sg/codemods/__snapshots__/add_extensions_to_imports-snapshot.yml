@@ -1,0 +1,62 @@
+id: add_extensions_to_imports
+snapshots:
+  import * as foo from './foo':
+    fixed: import * as foo from './foo.js'
+    labels:
+    - source: ./foo
+      style: primary
+      start: 22
+      end: 27
+    - source: import * as foo from './foo'
+      style: secondary
+      start: 0
+      end: 28
+    - source: '''./foo'''
+      style: secondary
+      start: 21
+      end: 28
+  import foo from './foo':
+    fixed: import foo from './foo.js'
+    labels:
+    - source: ./foo
+      style: primary
+      start: 17
+      end: 22
+    - source: import foo from './foo'
+      style: secondary
+      start: 0
+      end: 23
+    - source: '''./foo'''
+      style: secondary
+      start: 16
+      end: 23
+  import {foo, bar} from './foo':
+    fixed: import {foo, bar} from './foo.js'
+    labels:
+    - source: ./foo
+      style: primary
+      start: 24
+      end: 29
+    - source: import {foo, bar} from './foo'
+      style: secondary
+      start: 0
+      end: 30
+    - source: '''./foo'''
+      style: secondary
+      start: 23
+      end: 30
+  import {foo} from "./foo":
+    fixed: import {foo} from "./foo.js"
+    labels:
+    - source: ./foo
+      style: primary
+      start: 19
+      end: 24
+    - source: import {foo} from "./foo"
+      style: secondary
+      start: 0
+      end: 25
+    - source: '"./foo"'
+      style: secondary
+      start: 18
+      end: 25

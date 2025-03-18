@@ -1,0 +1,13 @@
+id: add_extensions_to_imports
+language: TypeScript
+rule:
+  all:
+    - pattern: $NODE
+    - not:
+        regex: "(\/|\\.[a-z]+)$"
+    - kind: string_fragment
+      inside:
+        kind: string
+        inside:
+          kind: import_statement
+fix: $NODE.js

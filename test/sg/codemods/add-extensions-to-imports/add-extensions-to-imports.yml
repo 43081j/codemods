@@ -1,0 +1,12 @@
+id: add_extensions_to_imports
+valid:
+  - import foo from './foo.js'
+  - import {foo, bar} from './foo.js'
+  - import * as foo from './foo.js'
+  - import {foo} from "./foo.js"
+  - import {foo} from './'
+invalid:
+  - import foo from './foo'
+  - import {foo, bar} from './foo'
+  - import * as foo from './foo'
+  - import {foo} from "./foo"

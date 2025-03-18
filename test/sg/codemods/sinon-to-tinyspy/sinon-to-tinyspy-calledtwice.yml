@@ -1,4 +1,4 @@
-id: sinon_to_tinyspy_calledTwice
+id: sinon_to_tinyspy_calledtwice
 valid:
   - unknownFn(spy.callCount === 2)
 invalid:
