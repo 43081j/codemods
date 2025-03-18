@@ -16,6 +16,7 @@ sg scan -r path-to-codemod.yml path-to-source-code
 
 | Name | Description |
 | -- | -- |
-| [chai-should-to-expect](./codemods/chai-should-to-expect.yml) | Convert `should` assertions to `expect` assertions |
+| [add-extensions-to-imports](./codemods/add-extensions-to-imports.yml) | Add `.js` to extensionless imports |
 | [chai-expect-to-node-assert](./codemods/chai-expect-to-node-assert.yml) | Convert chai `expect` assertions to `node:assert` assertions |
+| [chai-should-to-expect](./codemods/chai-should-to-expect.yml) | Convert `should` assertions to `expect` assertions |
 | [sinon-to-tinyspy](./codemods/sinon-to-tinyspy.yml) | Convert `sinon` spies to `tinyspy` spies |

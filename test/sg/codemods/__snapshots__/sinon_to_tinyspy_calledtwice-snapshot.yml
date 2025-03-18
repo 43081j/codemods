@@ -1,0 +1,9 @@
+id: sinon_to_tinyspy_calledtwice
+snapshots:
+  unknownFn(spy.calledTwice):
+    fixed: unknownFn(spy.callCount === 2)
+    labels:
+    - source: spy.calledTwice
+      style: primary
+      start: 10
+      end: 25
