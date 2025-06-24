@@ -1,0 +1,8 @@
+id: sinon_to_vitest_expect_calledThrice
+valid:
+  - expect(foo).toHaveBeenCalledTimes(3)
+  - expect(foo).to.have.been.calledOnce
+  - expect(foo).not.to.have.been.calledThrice
+invalid:
+  - expect(foo).to.have.been.calledThrice
+  - expect(foo).to.be.calledThrice

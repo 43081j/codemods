@@ -20,3 +20,4 @@ sg scan -r path-to-codemod.yml path-to-source-code
 | [chai-expect-to-node-assert](./codemods/chai-expect-to-node-assert.yml) | Convert chai `expect` assertions to `node:assert` assertions |
 | [chai-should-to-expect](./codemods/chai-should-to-expect.yml) | Convert `should` assertions to `expect` assertions |
 | [sinon-to-tinyspy](./codemods/sinon-to-tinyspy.yml) | Convert `sinon` spies to `tinyspy` spies |
+| [sinon-to-vitest](./codemods/sinon-to-vitest.yml) | Convert `sinon` spy assertions to vitest assertions |

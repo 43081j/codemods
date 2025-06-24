@@ -1,0 +1,11 @@
+id: sinon_to_vitest_expect_calledTwice_and_calledWith
+valid:
+  - expect(foo).toHaveBeenCalledTimes(2)
+  - expect(foo).to.have.been.calledTwice
+  - expect(foo).to.have.been.calledWith(x, y)
+  - expect(foo).to.have.been.calledWithExactly(x, y)
+  - expect(foo).to.have.been.calledWithMatch(x, y)
+invalid:
+  - expect(foo).to.have.been.calledTwice.and.to.have.been.calledWith(x, y)
+  - expect(foo).to.have.been.calledTwice.and.to.have.been.calledWithExactly(x, y)
+  - expect(foo).to.have.been.calledTwice.and.to.have.been.calledWithMatch(x, y)

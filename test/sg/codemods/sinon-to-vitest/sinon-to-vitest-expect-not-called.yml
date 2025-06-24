@@ -1,0 +1,7 @@
+id: sinon_to_vitest_expect_not_called
+valid:
+  - expect(foo).not.toHaveBeenCalled()
+  - expect(foo).to.have.been.called
+invalid:
+  - expect(foo).to.not.have.been.called
+  - expect(foo).not.to.have.been.called

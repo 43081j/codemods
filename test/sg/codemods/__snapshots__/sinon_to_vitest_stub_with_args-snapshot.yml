@@ -1,0 +1,9 @@
+id: sinon_to_vitest_stub_with_args
+snapshots:
+  sinon.stub(obj, prop):
+    fixed: vi.spyOn(obj, prop).mockImplementation(() => {})
+    labels:
+    - source: sinon.stub(obj, prop)
+      style: primary
+      start: 0
+      end: 21

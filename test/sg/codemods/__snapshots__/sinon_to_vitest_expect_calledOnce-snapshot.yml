@@ -1,0 +1,16 @@
+id: sinon_to_vitest_expect_calledOnce
+snapshots:
+  expect(foo).to.be.calledOnce:
+    fixed: expect(foo).toHaveBeenCalledOnce()
+    labels:
+    - source: expect(foo).to.be.calledOnce
+      style: primary
+      start: 0
+      end: 28
+  expect(foo).to.have.been.calledOnce:
+    fixed: expect(foo).toHaveBeenCalledOnce()
+    labels:
+    - source: expect(foo).to.have.been.calledOnce
+      style: primary
+      start: 0
+      end: 35

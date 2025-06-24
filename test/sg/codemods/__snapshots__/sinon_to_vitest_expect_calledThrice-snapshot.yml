@@ -1,0 +1,16 @@
+id: sinon_to_vitest_expect_calledThrice
+snapshots:
+  expect(foo).to.be.calledThrice:
+    fixed: expect(foo).toHaveBeenCalledTimes(3)
+    labels:
+    - source: expect(foo).to.be.calledThrice
+      style: primary
+      start: 0
+      end: 30
+  expect(foo).to.have.been.calledThrice:
+    fixed: expect(foo).toHaveBeenCalledTimes(3)
+    labels:
+    - source: expect(foo).to.have.been.calledThrice
+      style: primary
+      start: 0
+      end: 37

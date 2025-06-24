@@ -1,0 +1,8 @@
+id: sinon_to_vitest_expect_calledTwice
+valid:
+  - expect(foo).toHaveBeenCalledTimes(2)
+  - expect(foo).to.have.been.calledOnce
+  - expect(foo).not.to.have.been.calledTwice
+invalid:
+  - expect(foo).to.have.been.calledTwice
+  - expect(foo).to.be.calledTwice

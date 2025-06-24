@@ -1,0 +1,7 @@
+id: sinon_to_vitest_resetHistory
+valid:
+  - foo.mockClear()
+  - foo.reset()
+  - foo.resetHistory(a, b)
+invalid:
+  - foo.resetHistory()

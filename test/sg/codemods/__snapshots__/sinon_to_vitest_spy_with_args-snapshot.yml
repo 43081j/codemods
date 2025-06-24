@@ -1,0 +1,9 @@
+id: sinon_to_vitest_spy_with_args
+snapshots:
+  sinon.spy(foo):
+    fixed: vi.fn(foo)
+    labels:
+    - source: sinon.spy(foo)
+      style: primary
+      start: 0
+      end: 14

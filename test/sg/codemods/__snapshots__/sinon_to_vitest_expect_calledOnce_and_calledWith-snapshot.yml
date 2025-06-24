@@ -1,0 +1,29 @@
+id: sinon_to_vitest_expect_calledOnce_and_calledWith
+snapshots:
+  expect(foo).to.have.been.calledOnce.and.to.have.been.calledWith(x, y):
+    fixed: |-
+      expect(foo).toHaveBeenCalledOnce();
+      expect(foo).toHaveBeenCalledWith(x, y)
+    labels:
+    - source: expect(foo).to.have.been.calledOnce.and.to.have.been.calledWith(x, y)
+      style: primary
+      start: 0
+      end: 69
+  expect(foo).to.have.been.calledOnce.and.to.have.been.calledWithExactly(x, y):
+    fixed: |-
+      expect(foo).toHaveBeenCalledOnce();
+      expect(foo).toHaveBeenCalledWith(x, y)
+    labels:
+    - source: expect(foo).to.have.been.calledOnce.and.to.have.been.calledWithExactly(x, y)
+      style: primary
+      start: 0
+      end: 76
+  expect(foo).to.have.been.calledOnce.and.to.have.been.calledWithMatch(x, y):
+    fixed: |-
+      expect(foo).toHaveBeenCalledOnce();
+      expect(foo).toHaveBeenCalledWith(x, y)
+    labels:
+    - source: expect(foo).to.have.been.calledOnce.and.to.have.been.calledWithMatch(x, y)
+      style: primary
+      start: 0
+      end: 74

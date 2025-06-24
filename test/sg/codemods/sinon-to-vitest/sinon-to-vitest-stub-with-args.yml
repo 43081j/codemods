@@ -1,0 +1,8 @@
+id: sinon_to_vitest_stub_with_args
+valid:
+  - vi.spyOn(obj, prop)
+  - vi.spyOn(obj, prop).mockImplementation(() => {})
+  - sinon.stub()
+  - sinon.spy()
+invalid:
+  - sinon.stub(obj, prop)

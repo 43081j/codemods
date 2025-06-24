@@ -1,0 +1,16 @@
+id: sinon_to_vitest_expect_calledTwice
+snapshots:
+  expect(foo).to.be.calledTwice:
+    fixed: expect(foo).toHaveBeenCalledTimes(2)
+    labels:
+    - source: expect(foo).to.be.calledTwice
+      style: primary
+      start: 0
+      end: 29
+  expect(foo).to.have.been.calledTwice:
+    fixed: expect(foo).toHaveBeenCalledTimes(2)
+    labels:
+    - source: expect(foo).to.have.been.calledTwice
+      style: primary
+      start: 0
+      end: 36
