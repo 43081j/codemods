@@ -1,0 +1,9 @@
+id: sinon_to_vitest_expect_callCount
+snapshots:
+  expect(foo).to.have.callCount(2):
+    fixed: expect(foo).toHaveBeenCalledTimes(2)
+    labels:
+    - source: expect(foo).to.have.callCount(2)
+      style: primary
+      start: 0
+      end: 32

@@ -1,0 +1,16 @@
+id: sinon_to_vitest_expect_calledWithMatch
+snapshots:
+  expect(foo).to.have.been.calledWithMatch(bar):
+    fixed: expect(foo).toHaveBeenCalledWith(bar)
+    labels:
+    - source: expect(foo).to.have.been.calledWithMatch(bar)
+      style: primary
+      start: 0
+      end: 45
+  expect(foo).to.have.been.calledWithMatch(bar, baz):
+    fixed: expect(foo).toHaveBeenCalledWith(bar, baz)
+    labels:
+    - source: expect(foo).to.have.been.calledWithMatch(bar, baz)
+      style: primary
+      start: 0
+      end: 50

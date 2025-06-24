@@ -1,0 +1,7 @@
+id: sinon_to_vitest_match
+valid:
+  - expect.objectContaining(foo)
+  - sinon.match(foo, bar)
+invalid:
+  - sinon.match(foo)
+  - expect(foo).to.equal(sinon.match(bar))

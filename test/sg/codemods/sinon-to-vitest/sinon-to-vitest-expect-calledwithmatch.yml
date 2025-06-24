@@ -1,0 +1,7 @@
+id: sinon_to_vitest_expect_calledWithMatch
+valid:
+  - expect(foo).toHaveBeenCalledWith(bar)
+  - expect(foo).not.to.have.been.calledWithMatch(bar)
+invalid:
+  - expect(foo).to.have.been.calledWithMatch(bar)
+  - expect(foo).to.have.been.calledWithMatch(bar, baz)

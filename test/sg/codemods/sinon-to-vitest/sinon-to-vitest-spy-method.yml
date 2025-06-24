@@ -1,0 +1,7 @@
+id: sinon_to_vitest_spy_method
+valid:
+  - sinon.spy()
+  - sinon.spy(fn)
+  - vi.spyOn(obj, prop)
+invalid:
+  - sinon.spy(obj, prop)

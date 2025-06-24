@@ -1,0 +1,6 @@
+id: sinon_to_vitest_spy
+valid:
+  - vi.fn()
+  - sinon.spy(foo)
+invalid:
+  - sinon.spy()

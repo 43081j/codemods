@@ -1,0 +1,6 @@
+id: sinon_to_vitest_match_func
+valid:
+  - sinon.match.object
+  - expect.any(Function)
+invalid:
+  - sinon.match.func

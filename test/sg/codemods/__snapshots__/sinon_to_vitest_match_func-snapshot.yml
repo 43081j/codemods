@@ -1,0 +1,9 @@
+id: sinon_to_vitest_match_func
+snapshots:
+  sinon.match.func:
+    fixed: expect.any(Function)
+    labels:
+    - source: sinon.match.func
+      style: primary
+      start: 0
+      end: 16

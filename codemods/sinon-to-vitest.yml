@@ -1,0 +1,170 @@
+id: sinon_to_vitest_spy
+language: JavaScript
+rule:
+  pattern: sinon.spy()
+fix: |-
+  vi.fn()
+
+---
+id: sinon_to_vitest_spy_with_args
+language: JavaScript
+rule:
+  pattern: sinon.spy($ARG)
+fix: |-
+  vi.fn($ARG)
+
+---
+id: sinon_to_vitest_stub_with_args
+language: JavaScript
+rule:
+  pattern: sinon.stub($OBJ, $PROP)
+fix: |-
+  vi.spyOn($OBJ, $PROP).mockImplementation(() => {})
+
+---
+id: sinon_to_vitest_match
+language: JavaScript
+rule:
+  pattern: sinon.match($ARG)
+fix: |-
+  expect.objectContaining($ARG)
+
+---
+id: sinon_to_vitest_spy_method
+language: JavaScript
+rule:
+  pattern: sinon.spy($OBJ, $PROP)
+fix: |-
+  vi.spyOn($OBJ, $PROP)
+
+---
+id: sinon_to_vitest_match_func
+language: JavaScript
+rule:
+  pattern: sinon.match.func
+fix: |-
+  expect.any(Function)
+
+---
+id: sinon_to_vitest_expect_called
+language: JavaScript
+rule:
+  pattern: expect($ARG).to.have.been.called
+fix: |-
+  expect($ARG).toHaveBeenCalled()
+
+---
+id: sinon_to_vitest_expect_calledOnce
+language: JavaScript
+rule:
+  any:
+    - pattern: expect($ARG).to.have.been.calledOnce
+    - pattern: expect($ARG).to.be.calledOnce
+fix: |-
+  expect($ARG).toHaveBeenCalledOnce()
+
+---
+id: sinon_to_vitest_expect_calledTwice
+language: JavaScript
+rule:
+  any:
+    - pattern: expect($ARG).to.have.been.calledTwice
+    - pattern: expect($ARG).to.be.calledTwice
+fix: |-
+  expect($ARG).toHaveBeenCalledTimes(2)
+
+---
+id: sinon_to_vitest_expect_calledThrice
+language: JavaScript
+rule:
+  any:
+    - pattern: expect($ARG).to.have.been.calledThrice
+    - pattern: expect($ARG).to.be.calledThrice
+fix: |-
+  expect($ARG).toHaveBeenCalledTimes(3)
+
+---
+id: sinon_to_vitest_expect_not_called
+language: JavaScript
+rule:
+  any:
+    - pattern: expect($ARG).to.not.have.been.called
+    - pattern: expect($ARG).not.to.have.been.called
+fix: |-
+  expect($ARG).not.toHaveBeenCalled()
+
+---
+id: sinon_to_vitest_expect_calledWith
+language: JavaScript
+rule:
+  any:
+    - pattern: expect($ARG).to.have.been.calledWith($$$ARGS)
+    - pattern: expect($ARG).to.have.been.calledWithExactly($$$ARGS)
+fix: |-
+  expect($ARG).toHaveBeenCalledWith($$$ARGS)
+
+---
+id: sinon_to_vitest_expect_not_calledWith
+language: JavaScript
+rule:
+  any:
+    - pattern: expect($ARG).not.to.have.been.calledWith($$$ARGS)
+    - pattern: expect($ARG).not.to.have.been.calledWithExactly($$$ARGS)
+fix: |-
+  expect($ARG).not.toHaveBeenCalledWith($$$ARGS)
+
+---
+id: sinon_to_vitest_expect_calledOnce_and_calledWith
+language: JavaScript
+rule:
+  any:
+    - pattern: expect($ARG).to.have.been.calledOnce.and.to.have.been.calledWithMatch($$$ARGS)
+    - pattern: expect($ARG).to.have.been.calledOnce.and.to.have.been.calledWithExactly($$$ARGS)
+    - pattern: expect($ARG).to.have.been.calledOnce.and.to.have.been.calledWith($$$ARGS)
+fix: |-
+  expect($ARG).toHaveBeenCalledOnce();
+  expect($ARG).toHaveBeenCalledWith($$$ARGS)
+
+---
+id: sinon_to_vitest_expect_calledTwice_and_calledWith
+language: JavaScript
+rule:
+  any:
+    - pattern: expect($ARG).to.have.been.calledTwice.and.to.have.been.calledWithMatch($$$ARGS)
+    - pattern: expect($ARG).to.have.been.calledTwice.and.to.have.been.calledWithExactly($$$ARGS)
+    - pattern: expect($ARG).to.have.been.calledTwice.and.to.have.been.calledWith($$$ARGS)
+fix: |-
+  expect($ARG).toHaveBeenCalledTimes(2);
+  expect($ARG).toHaveBeenCalledWith($$$ARGS)
+
+---
+id: sinon_to_vitest_expect_calledWithMatch
+language: JavaScript
+rule:
+  pattern: expect($ARG).to.have.been.calledWithMatch($$$ARGS)
+fix: |-
+  expect($ARG).toHaveBeenCalledWith($$$ARGS)
+
+---
+id: sinon_to_vitest_expect_calledBefore
+language: JavaScript
+rule:
+  pattern: expect($ARG).to.have.been.calledBefore($BEFORE)
+fix: |-
+  expect($ARG).toHaveBeenCalledBefore($BEFORE)
+
+---
+id: sinon_to_vitest_resetHistory
+language: JavaScript
+rule:
+  pattern: $ARG.resetHistory()
+fix: |-
+  $ARG.mockClear()
+
+---
+id: sinon_to_vitest_expect_callCount
+language: JavaScript
+rule:
+  pattern: expect($ARG).to.have.callCount($COUNT)
+fix: |-
+  expect($ARG).toHaveBeenCalledTimes($COUNT)

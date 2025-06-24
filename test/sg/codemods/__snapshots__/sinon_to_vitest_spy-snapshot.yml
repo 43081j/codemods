@@ -1,0 +1,9 @@
+id: sinon_to_vitest_spy
+snapshots:
+  sinon.spy():
+    fixed: vi.fn()
+    labels:
+    - source: sinon.spy()
+      style: primary
+      start: 0
+      end: 11

@@ -1,0 +1,16 @@
+id: sinon_to_vitest_expect_not_calledWith
+snapshots:
+  expect(foo).not.to.have.been.calledWith(x, y):
+    fixed: expect(foo).not.toHaveBeenCalledWith(x, y)
+    labels:
+    - source: expect(foo).not.to.have.been.calledWith(x, y)
+      style: primary
+      start: 0
+      end: 45
+  expect(foo).not.to.have.been.calledWithExactly(x, y):
+    fixed: expect(foo).not.toHaveBeenCalledWith(x, y)
+    labels:
+    - source: expect(foo).not.to.have.been.calledWithExactly(x, y)
+      style: primary
+      start: 0
+      end: 52

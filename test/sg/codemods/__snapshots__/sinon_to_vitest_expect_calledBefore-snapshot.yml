@@ -1,0 +1,9 @@
+id: sinon_to_vitest_expect_calledBefore
+snapshots:
+  expect(foo).to.have.been.calledBefore(bar):
+    fixed: expect(foo).toHaveBeenCalledBefore(bar)
+    labels:
+    - source: expect(foo).to.have.been.calledBefore(bar)
+      style: primary
+      start: 0
+      end: 42

@@ -1,0 +1,9 @@
+id: sinon_to_vitest_spy_method
+snapshots:
+  sinon.spy(obj, prop):
+    fixed: vi.spyOn(obj, prop)
+    labels:
+    - source: sinon.spy(obj, prop)
+      style: primary
+      start: 0
+      end: 20

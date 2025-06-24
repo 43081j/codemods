@@ -1,0 +1,9 @@
+id: sinon_to_vitest_expect_called
+snapshots:
+  expect(foo).to.have.been.called:
+    fixed: expect(foo).toHaveBeenCalled()
+    labels:
+    - source: expect(foo).to.have.been.called
+      style: primary
+      start: 0
+      end: 31

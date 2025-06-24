@@ -1,0 +1,9 @@
+id: sinon_to_vitest_resetHistory
+snapshots:
+  foo.resetHistory():
+    fixed: foo.mockClear()
+    labels:
+    - source: foo.resetHistory()
+      style: primary
+      start: 0
+      end: 18
