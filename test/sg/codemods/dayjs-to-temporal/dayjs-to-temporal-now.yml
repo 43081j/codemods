@@ -1,0 +1,8 @@
+id: dayjs_to_temporal_now
+valid:
+  - dayjs("2000-01-02T02:03:04Z")
+  - dayjs(someDate)
+  - dayjs(1280000000000)
+  - dayjs(1280000000)
+invalid:
+  - dayjs()

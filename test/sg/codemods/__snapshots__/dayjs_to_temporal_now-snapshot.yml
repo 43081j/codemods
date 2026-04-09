@@ -1,0 +1,9 @@
+id: dayjs_to_temporal_now
+snapshots:
+  dayjs():
+    fixed: Temporal.Now.instant()
+    labels:
+    - source: dayjs()
+      style: primary
+      start: 0
+      end: 7

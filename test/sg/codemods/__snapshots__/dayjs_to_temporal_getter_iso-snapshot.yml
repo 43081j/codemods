@@ -1,0 +1,51 @@
+id: dayjs_to_temporal_getter_iso
+snapshots:
+  dayjs("2024-01-01 00:00:00Z").minute():
+    fixed: Temporal.ZonedDateTime.from("2024-01-01T00:00:00Z").minute
+    labels:
+    - source: dayjs("2024-01-01 00:00:00Z").minute()
+      style: primary
+      start: 0
+      end: 38
+  dayjs("2024-01-01T00:00:00Z").date():
+    fixed: Temporal.ZonedDateTime.from("2024-01-01T00:00:00Z").day
+    labels:
+    - source: dayjs("2024-01-01T00:00:00Z").date()
+      style: primary
+      start: 0
+      end: 36
+  dayjs("2024-01-01T00:00:00Z").day():
+    fixed: Temporal.ZonedDateTime.from("2024-01-01T00:00:00Z").dayOfWeek
+    labels:
+    - source: dayjs("2024-01-01T00:00:00Z").day()
+      style: primary
+      start: 0
+      end: 35
+  dayjs("2024-01-01T00:00:00Z").dayOfYear():
+    fixed: Temporal.ZonedDateTime.from("2024-01-01T00:00:00Z").dayOfYear
+    labels:
+    - source: dayjs("2024-01-01T00:00:00Z").dayOfYear()
+      style: primary
+      start: 0
+      end: 41
+  dayjs("2024-01-01T00:00:00Z").hour():
+    fixed: Temporal.ZonedDateTime.from("2024-01-01T00:00:00Z").hour
+    labels:
+    - source: dayjs("2024-01-01T00:00:00Z").hour()
+      style: primary
+      start: 0
+      end: 36
+  dayjs("2024-01-01T00:00:00Z").millisecond():
+    fixed: Temporal.ZonedDateTime.from("2024-01-01T00:00:00Z").millisecond
+    labels:
+    - source: dayjs("2024-01-01T00:00:00Z").millisecond()
+      style: primary
+      start: 0
+      end: 43
+  dayjs("2024-01-01T00:00:00Z").second():
+    fixed: Temporal.ZonedDateTime.from("2024-01-01T00:00:00Z").second
+    labels:
+    - source: dayjs("2024-01-01T00:00:00Z").second()
+      style: primary
+      start: 0
+      end: 38

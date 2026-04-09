@@ -1,0 +1,97 @@
+id: dayjs_to_temporal_getter_var
+snapshots:
+  ? |
+    const d = dayjs("2024-01-01T00:00:00Z");
+    d.date();
+  : fixed: |
+      const d = dayjs("2024-01-01T00:00:00Z");
+      d.day;
+    labels:
+    - source: d.date()
+      style: primary
+      start: 41
+      end: 49
+    - source: const d = dayjs("2024-01-01T00:00:00Z");
+      style: secondary
+      start: 0
+      end: 40
+    - source: const d = dayjs("2024-01-01T00:00:00Z");
+      style: secondary
+      start: 0
+      end: 40
+  ? |
+    const d = dayjs("2024-01-01T00:00:00Z");
+    d.day();
+  : fixed: |
+      const d = dayjs("2024-01-01T00:00:00Z");
+      d.dayOfWeek;
+    labels:
+    - source: d.day()
+      style: primary
+      start: 41
+      end: 48
+    - source: const d = dayjs("2024-01-01T00:00:00Z");
+      style: secondary
+      start: 0
+      end: 40
+    - source: const d = dayjs("2024-01-01T00:00:00Z");
+      style: secondary
+      start: 0
+      end: 40
+  ? |
+    const d = dayjs("2024-01-01T00:00:00Z");
+    d.hour();
+  : fixed: |
+      const d = dayjs("2024-01-01T00:00:00Z");
+      d.hour;
+    labels:
+    - source: d.hour()
+      style: primary
+      start: 41
+      end: 49
+    - source: const d = dayjs("2024-01-01T00:00:00Z");
+      style: secondary
+      start: 0
+      end: 40
+    - source: const d = dayjs("2024-01-01T00:00:00Z");
+      style: secondary
+      start: 0
+      end: 40
+  ? |
+    const d = dayjs("2024-01-01T00:00:00Z");
+    d.second();
+  : fixed: |
+      const d = dayjs("2024-01-01T00:00:00Z");
+      d.second;
+    labels:
+    - source: d.second()
+      style: primary
+      start: 41
+      end: 51
+    - source: const d = dayjs("2024-01-01T00:00:00Z");
+      style: secondary
+      start: 0
+      end: 40
+    - source: const d = dayjs("2024-01-01T00:00:00Z");
+      style: secondary
+      start: 0
+      end: 40
+  ? |
+    const d = dayjs();
+    d.millisecond();
+  : fixed: |
+      const d = dayjs();
+      d.millisecond;
+    labels:
+    - source: d.millisecond()
+      style: primary
+      start: 19
+      end: 34
+    - source: const d = dayjs();
+      style: secondary
+      start: 0
+      end: 18
+    - source: const d = dayjs();
+      style: secondary
+      start: 0
+      end: 18

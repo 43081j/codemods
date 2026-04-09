@@ -1,0 +1,37 @@
+id: dayjs_to_temporal_getter_epoch_ms
+snapshots:
+  dayjs(1280000000000).date():
+    fixed: Temporal.Instant.fromEpochMilliseconds(1280000000000).toZonedDateTimeISO(Temporal.Now.timeZoneId()).day
+    labels:
+    - source: dayjs(1280000000000).date()
+      style: primary
+      start: 0
+      end: 27
+  dayjs(1280000000000).day():
+    fixed: Temporal.Instant.fromEpochMilliseconds(1280000000000).toZonedDateTimeISO(Temporal.Now.timeZoneId()).dayOfWeek
+    labels:
+    - source: dayjs(1280000000000).day()
+      style: primary
+      start: 0
+      end: 26
+  dayjs(1280000000000).hour():
+    fixed: Temporal.Instant.fromEpochMilliseconds(1280000000000).toZonedDateTimeISO(Temporal.Now.timeZoneId()).hour
+    labels:
+    - source: dayjs(1280000000000).hour()
+      style: primary
+      start: 0
+      end: 27
+  dayjs(1280000000000).millisecond():
+    fixed: Temporal.Instant.fromEpochMilliseconds(1280000000000).toZonedDateTimeISO(Temporal.Now.timeZoneId()).millisecond
+    labels:
+    - source: dayjs(1280000000000).millisecond()
+      style: primary
+      start: 0
+      end: 34
+  dayjs(1280000000000).second():
+    fixed: Temporal.Instant.fromEpochMilliseconds(1280000000000).toZonedDateTimeISO(Temporal.Now.timeZoneId()).second
+    labels:
+    - source: dayjs(1280000000000).second()
+      style: primary
+      start: 0
+      end: 29

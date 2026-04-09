@@ -1,0 +1,180 @@
+id: dayjs_to_temporal_parse_iso
+language: JavaScript
+rule:
+  pattern: dayjs($ARG1)
+constraints:
+  ARG1:
+    kind: string
+    regex: \d{4}-\d{2}-\d{2}[T ]\d{2}
+transform:
+  NEW_ARG:
+    replace:
+      source: $ARG1
+      replace: (?<DATE>\d{4}-\d{2}-\d{2})\s(?<TIME>\d{2}.*)
+      by: ${DATE}T${TIME}
+fix: |-
+  Temporal.ZonedDateTime.from($NEW_ARG)
+---
+id: dayjs_to_temporal_from_epoch_ms
+language: JavaScript
+rule:
+  pattern: dayjs($ARG1)
+constraints:
+  ARG1:
+    kind: number
+    regex: ^\d{13}$
+fix: |-
+  Temporal.Instant.fromEpochMilliseconds($ARG1).toZonedDateTimeISO(Temporal.Now.timeZoneId())
+---
+id: dayjs_to_temporal_from_epoch_s
+language: JavaScript
+rule:
+  pattern: dayjs($ARG1)
+constraints:
+  ARG1:
+    kind: number
+    regex: ^\d{10}$
+transform:
+  MS_VALUE:
+    replace:
+      source: $ARG1
+      replace: $
+      by: '000'
+fix: |-
+  Temporal.Instant.fromEpochMilliseconds($MS_VALUE).toZonedDateTimeISO(Temporal.Now.timeZoneId())
+---
+id: dayjs_to_temporal_now
+language: JavaScript
+rule:
+  pattern: dayjs()
+fix: |-
+  Temporal.Now.instant()
+---
+id: dayjs_to_temporal_getter_iso
+language: JavaScript
+rule:
+  pattern: dayjs($ARG).$PROP()
+constraints:
+  ARG:
+    kind: string
+    regex: \d{4}-\d{2}-\d{2}[T ]\d{2}
+  PROP:
+    regex: ^(second|minute|hour|millisecond|date|day|dayOfYear)$
+transform:
+  NEW_ARG:
+    replace:
+      source: $ARG
+      replace: (?<DATE>\d{4}-\d{2}-\d{2})\s(?<TIME>\d{2}.*)
+      by: ${DATE}T${TIME}
+  PROP_STEP:
+    replace:
+      source: $PROP
+      replace: ^day$
+      by: dayOfWeek
+  NEW_PROP:
+    replace:
+      source: $PROP_STEP
+      replace: ^date$
+      by: day
+fix: |-
+  Temporal.ZonedDateTime.from($NEW_ARG).$NEW_PROP
+---
+id: dayjs_to_temporal_getter_epoch_ms
+language: JavaScript
+rule:
+  pattern: dayjs($ARG).$PROP()
+constraints:
+  ARG:
+    kind: number
+    regex: ^\d{13}$
+  PROP:
+    regex: ^(second|minute|hour|millisecond|date|day|dayOfYear)$
+transform:
+  PROP_STEP:
+    replace:
+      source: $PROP
+      replace: ^day$
+      by: dayOfWeek
+  NEW_PROP:
+    replace:
+      source: $PROP_STEP
+      replace: ^date$
+      by: day
+fix: |-
+  Temporal.Instant.fromEpochMilliseconds($ARG).toZonedDateTimeISO(Temporal.Now.timeZoneId()).$NEW_PROP
+---
+id: dayjs_to_temporal_getter_epoch_s
+language: JavaScript
+rule:
+  pattern: dayjs($ARG).$PROP()
+constraints:
+  ARG:
+    kind: number
+    regex: ^\d{10}$
+  PROP:
+    regex: ^(second|minute|hour|millisecond|date|day|dayOfYear)$
+transform:
+  MS_VALUE:
+    replace:
+      source: $ARG
+      replace: $
+      by: '000'
+  PROP_STEP:
+    replace:
+      source: $PROP
+      replace: ^day$
+      by: dayOfWeek
+  NEW_PROP:
+    replace:
+      source: $PROP_STEP
+      replace: ^date$
+      by: day
+fix: |-
+  Temporal.Instant.fromEpochMilliseconds($MS_VALUE).toZonedDateTimeISO(Temporal.Now.timeZoneId()).$NEW_PROP
+---
+id: dayjs_to_temporal_getter_now
+language: JavaScript
+rule:
+  pattern: dayjs().$PROP()
+constraints:
+  PROP:
+    regex: ^(second|minute|hour|millisecond|date|day|dayOfYear)$
+transform:
+  PROP_STEP:
+    replace:
+      source: $PROP
+      replace: ^day$
+      by: dayOfWeek
+  NEW_PROP:
+    replace:
+      source: $PROP_STEP
+      replace: ^date$
+      by: day
+fix: |-
+  Temporal.Now.zonedDateTimeISO(Temporal.Now.timeZoneId()).$NEW_PROP
+---
+id: dayjs_to_temporal_getter_var
+language: JavaScript
+rule:
+  pattern: $NAME.$PROP()
+  inside:
+    stopBy: end
+    follows:
+      stopBy: end
+      pattern: const $NAME = dayjs($$$ARGS)
+constraints:
+  PROP:
+    regex: ^(second|minute|hour|millisecond|date|day|dayOfYear)$
+transform:
+  PROP_STEP:
+    replace:
+      source: $PROP
+      replace: ^day$
+      by: dayOfWeek
+  NEW_PROP:
+    replace:
+      source: $PROP_STEP
+      replace: ^date$
+      by: day
+fix: |-
+  $NAME.$NEW_PROP

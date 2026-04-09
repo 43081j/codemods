@@ -1,0 +1,15 @@
+id: dayjs_to_temporal_getter_iso
+valid:
+  - dayjs("2024-01-01T00:00:00Z").second(30)
+  - bar("2024-01-01T00:00:00Z").second()
+  - dayjs("2024-01-01T00:00:00Z").format()
+  - dayjs(1280000000000).second()
+  - dayjs().second()
+invalid:
+  - dayjs("2024-01-01T00:00:00Z").second()
+  - dayjs("2024-01-01 00:00:00Z").minute()
+  - dayjs("2024-01-01T00:00:00Z").hour()
+  - dayjs("2024-01-01T00:00:00Z").millisecond()
+  - dayjs("2024-01-01T00:00:00Z").date()
+  - dayjs("2024-01-01T00:00:00Z").day()
+  - dayjs("2024-01-01T00:00:00Z").dayOfYear()
