@@ -1,0 +1,13 @@
+id: dayjs_to_temporal_getter_now
+valid:
+  - dayjs().second(30)
+  - dayjs("2024-01-01T00:00:00Z").second()
+  - bar().second()
+invalid:
+  - dayjs().second()
+  - dayjs().hour()
+  - dayjs().minute()
+  - dayjs().millisecond()
+  - dayjs().date()
+  - dayjs().day()
+  - dayjs().dayOfYear()

@@ -1,0 +1,51 @@
+id: dayjs_to_temporal_getter_now
+snapshots:
+  dayjs().date():
+    fixed: Temporal.Now.zonedDateTimeISO(Temporal.Now.timeZoneId()).day
+    labels:
+    - source: dayjs().date()
+      style: primary
+      start: 0
+      end: 14
+  dayjs().day():
+    fixed: Temporal.Now.zonedDateTimeISO(Temporal.Now.timeZoneId()).dayOfWeek
+    labels:
+    - source: dayjs().day()
+      style: primary
+      start: 0
+      end: 13
+  dayjs().dayOfYear():
+    fixed: Temporal.Now.zonedDateTimeISO(Temporal.Now.timeZoneId()).dayOfYear
+    labels:
+    - source: dayjs().dayOfYear()
+      style: primary
+      start: 0
+      end: 19
+  dayjs().hour():
+    fixed: Temporal.Now.zonedDateTimeISO(Temporal.Now.timeZoneId()).hour
+    labels:
+    - source: dayjs().hour()
+      style: primary
+      start: 0
+      end: 14
+  dayjs().millisecond():
+    fixed: Temporal.Now.zonedDateTimeISO(Temporal.Now.timeZoneId()).millisecond
+    labels:
+    - source: dayjs().millisecond()
+      style: primary
+      start: 0
+      end: 21
+  dayjs().minute():
+    fixed: Temporal.Now.zonedDateTimeISO(Temporal.Now.timeZoneId()).minute
+    labels:
+    - source: dayjs().minute()
+      style: primary
+      start: 0
+      end: 16
+  dayjs().second():
+    fixed: Temporal.Now.zonedDateTimeISO(Temporal.Now.timeZoneId()).second
+    labels:
+    - source: dayjs().second()
+      style: primary
+      start: 0
+      end: 16

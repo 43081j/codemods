@@ -1,0 +1,24 @@
+id: dayjs_to_temporal_getter_var
+valid:
+  - |
+    const d = dayjs("2024-01-01T00:00:00Z");
+    d.second(30);
+  - |
+    const d = foo();
+    d.second();
+invalid:
+  - |
+    const d = dayjs("2024-01-01T00:00:00Z");
+    d.second();
+  - |
+    const d = dayjs("2024-01-01T00:00:00Z");
+    d.hour();
+  - |
+    const d = dayjs();
+    d.millisecond();
+  - |
+    const d = dayjs("2024-01-01T00:00:00Z");
+    d.date();
+  - |
+    const d = dayjs("2024-01-01T00:00:00Z");
+    d.day();

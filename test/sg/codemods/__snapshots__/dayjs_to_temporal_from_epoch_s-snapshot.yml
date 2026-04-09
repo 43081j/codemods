@@ -1,0 +1,9 @@
+id: dayjs_to_temporal_from_epoch_s
+snapshots:
+  dayjs(1280000000):
+    fixed: Temporal.Instant.fromEpochMilliseconds(1280000000000).toZonedDateTimeISO(Temporal.Now.timeZoneId())
+    labels:
+    - source: dayjs(1280000000)
+      style: primary
+      start: 0
+      end: 17

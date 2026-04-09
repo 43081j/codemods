@@ -1,0 +1,16 @@
+id: dayjs_to_temporal_parse_iso
+snapshots:
+  dayjs("2000-01-02 02:03:04Z"):
+    fixed: Temporal.ZonedDateTime.from("2000-01-02T02:03:04Z")
+    labels:
+    - source: dayjs("2000-01-02 02:03:04Z")
+      style: primary
+      start: 0
+      end: 29
+  dayjs("2000-01-02T02:03:04Z"):
+    fixed: Temporal.ZonedDateTime.from("2000-01-02T02:03:04Z")
+    labels:
+    - source: dayjs("2000-01-02T02:03:04Z")
+      style: primary
+      start: 0
+      end: 29

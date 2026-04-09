@@ -1,0 +1,12 @@
+id: dayjs_to_temporal_getter_epoch_ms
+valid:
+  - dayjs(1280000000000).second(30)
+  - dayjs("2024-01-01T00:00:00Z").second()
+  - dayjs(1280000000).second()
+  - dayjs().second()
+invalid:
+  - dayjs(1280000000000).second()
+  - dayjs(1280000000000).hour()
+  - dayjs(1280000000000).millisecond()
+  - dayjs(1280000000000).date()
+  - dayjs(1280000000000).day()
