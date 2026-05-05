@@ -1,0 +1,9 @@
+id: ava_to_vitest_test_async
+snapshots:
+  test('foo', async (t) => { t.is(1, 1); }):
+    fixed: test('foo', async () => { t.is(1, 1); })
+    labels:
+    - source: test('foo', async (t) => { t.is(1, 1); })
+      style: primary
+      start: 0
+      end: 41

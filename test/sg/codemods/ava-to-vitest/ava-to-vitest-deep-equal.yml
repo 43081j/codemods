@@ -1,0 +1,5 @@
+id: ava_to_vitest_deep_equal
+valid:
+  - expect(a).toEqual(b)
+invalid:
+  - t.deepEqual(a, b)

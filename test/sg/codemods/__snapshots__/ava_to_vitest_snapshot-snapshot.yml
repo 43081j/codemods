@@ -1,0 +1,9 @@
+id: ava_to_vitest_snapshot
+snapshots:
+  t.snapshot(foo):
+    fixed: expect(foo).toMatchSnapshot()
+    labels:
+    - source: t.snapshot(foo)
+      style: primary
+      start: 0
+      end: 15

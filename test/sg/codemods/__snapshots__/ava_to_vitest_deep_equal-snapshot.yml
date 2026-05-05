@@ -1,0 +1,9 @@
+id: ava_to_vitest_deep_equal
+snapshots:
+  t.deepEqual(a, b):
+    fixed: expect(a).toEqual(b)
+    labels:
+    - source: t.deepEqual(a, b)
+      style: primary
+      start: 0
+      end: 17
