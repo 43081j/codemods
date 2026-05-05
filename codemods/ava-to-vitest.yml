@@ -1,0 +1,30 @@
+id: ava_to_vitest_test_async
+language: JavaScript
+rule:
+  pattern: test($NAME, async (t) => { $$$BODY })
+fix: |-
+  test($NAME, async () => { $$$BODY })
+
+---
+id: ava_to_vitest_test_sync
+language: JavaScript
+rule:
+  pattern: test($NAME, (t) => { $$$BODY })
+fix: |-
+  test($NAME, () => { $$$BODY })
+
+---
+id: ava_to_vitest_snapshot
+language: JavaScript
+rule:
+  pattern: t.snapshot($ARG)
+fix: |-
+  expect($ARG).toMatchSnapshot()
+
+---
+id: ava_to_vitest_deep_equal
+language: JavaScript
+rule:
+  pattern: t.deepEqual($A, $B)
+fix: |-
+  expect($A).toEqual($B)

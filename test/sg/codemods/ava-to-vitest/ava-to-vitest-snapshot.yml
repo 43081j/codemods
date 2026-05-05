@@ -1,0 +1,5 @@
+id: ava_to_vitest_snapshot
+valid:
+  - expect(foo).toMatchSnapshot()
+invalid:
+  - t.snapshot(foo)

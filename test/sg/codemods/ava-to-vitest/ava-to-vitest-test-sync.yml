@@ -1,0 +1,6 @@
+id: ava_to_vitest_test_sync
+valid:
+  - test('foo', () => { doStuff(); })
+  - test('foo', async (t) => { t.is(1, 1); })
+invalid:
+  - test('foo', (t) => { t.is(1, 1); })
